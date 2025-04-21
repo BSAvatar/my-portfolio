@@ -1,0 +1,308 @@
+/* General Page Layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif; /* Global font for readability */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the footer stays at the bottom */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow: auto; /* Allow scrolling when content exceeds the screen height */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: auto; /* Makes the footer stay at the bottom of the page */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Footer responsiveness */
+@media (max-width: 768px) {
+  footer {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+/* Footer for mobile devices */
+@media (max-width: 480px) {
+  footer {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar .navbar-title {
+  font-size: 24px;
+}
+
+.navbar .navbar-links {
+  margin-top: 10px;
+}
+
+.navbar .navbar-links a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar .navbar-links a:hover {
+  color: #007BFF;
+}
+
+/* Home Page Styling */
+.home {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.home h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.home p {
+  font-size: 18px;
+  color: #555;
+}
+
+.home img {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* About Page Styling */
+.about {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.about h2 {
+  font-size: 30px;
+  color: #333;
+}
+
+.about p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about img {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Projects Page Styling */
+.projects {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.projects h2 {
+  font-size: 30px;
+  color: #333;
+}
+
+.project-item {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-block;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.project-item h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.project-item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.project-item img {
+  width: 100%;
+  height: 200px;
+  margin-top: 15px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Contact Page Styling */
+.contact {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.contact h2 {
+  font-size: 30px;
+  color: #333;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Image styling for all pages */
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* General content styling */
+h1, h2, h3, h4, h5 {
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+  .navbar .navbar-links {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .navbar .navbar-links a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .home h1 {
+    font-size: 28px;
+  }
+
+  .home p {
+    font-size: 16px;
+  }
+
+  .about h2, .projects h2, .contact h2 {
+    font-size: 26px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Adjust image width on smaller screens */
+  .home img, .about img, .project-item img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 24px;
+  }
+
+  .home p {
+    font-size: 14px;
+  }
+
+  .about h2, .projects h2, .contact h2 {
+    font-size: 22px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 14px;
+  }
+
+  /* Adjust image size for very small screens */
+  .home img, .about img, .project-item img {
+    max-width: 90%;
+  }
+}
+.home-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
